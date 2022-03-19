@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod+x /entrypoint.sh
