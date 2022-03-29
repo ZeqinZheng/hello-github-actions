@@ -1,11 +1,11 @@
 name: workflow
 on: push
 jobs:
-    build:
-        name: b
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v1
-            - uses: ./action-a
-              with:
-                MY_NAME: "TzarYam"
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: invoke script
+        run: chmod +x action-a/entrypoint.sh
+        run: sh action-a/entrypoint.sh
+        shell: bash
