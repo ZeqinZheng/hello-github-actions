@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: invoke script
+      - name: give execution permission 
         run: chmod +x action-a/entrypoint.sh
+      - name: run script
         run: sh action-a/entrypoint.sh
         shell: bash
